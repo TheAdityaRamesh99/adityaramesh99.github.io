@@ -1,0 +1,58 @@
+def hello():
+    print "Hello!"
+    print "Welcome to RPSLS!"
+
+def number_to_name(n):
+    if n==0:
+     return "rock"
+    elif n==1:
+     return "Spock"
+    elif n==2:
+     return "paper"
+    elif n==3:
+     return "lizard"
+    elif n==4:
+     return "scissors"
+    else:
+        return "Incorrect"
+
+def name_to_number(name):
+    if name=="rock":
+        return 0
+    elif name=="Spock":
+        return 1
+    elif name=="paper":
+        return 2
+    elif name=="lizard":
+        return 3
+    elif name=="scissors":
+        return 4
+    else:
+        return "Incorrect"
+
+def rpsls(player_choice):
+    print '\n'
+    print "Player chooses",player_choice
+    player_num=name_to_number(player_choice)
+    import random
+    comp_choice=random.randrange(0,5)
+    print "Computer chooses",number_to_name(comp_choice)
+    x=comp_choice-player_num
+    if (x<=0):
+        x=x+5
+    if (x==1 or x==2):
+        print "Computer wins!"
+        return 
+    elif (x==3 or x==4):
+        print "Player wins!"
+        return
+    else:
+        print "Tie!"
+        return
+
+hello()
+rpsls("rock")
+rpsls("Spock")
+rpsls("paper")
+rpsls("lizard")
+rpsls("scissors")

@@ -1,0 +1,42 @@
+//Guess the number
+# helper function to start and restart the game
+secret_number = 0
+higher=lower=correct=False
+def new_game():
+    # initialize global variables used in your code here
+    import random
+    global secret_number
+    secret_number = random.randrange(0, 100)
+    print secret_number
+
+# define event handlers for control panel
+def range100():
+    # button that changes the range to [0,100) and starts a new game 
+    
+def range1000():
+    # button that changes the range to [0,1000) and starts a new game     
+    
+    
+def input_guess(guess):
+    # main game logic goes here	
+    
+    
+# create frame
+
+
+# register event handlers for control elements and start frame
+def fun1():
+    
+
+# call new_game 
+new_game()
+
+if (turn_num==0):
+    print "Out of guesses"
+    break
+elif higher:
+    print "Higher"
+elif lower:
+    print "Lower"
+elif correct:
+    print "Correct"
